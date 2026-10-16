@@ -1,0 +1,2 @@
+//! Config scaffold.
+//! TODO: Implement.

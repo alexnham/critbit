@@ -1,0 +1,2 @@
+//! Pool scaffold.
+//! TODO: Implement.
