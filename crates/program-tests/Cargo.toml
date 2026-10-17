@@ -1,0 +1,20 @@
+[package]
+name = "critbit-program-tests"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+critbit-amm = { path = "../../programs/amm", features = ["no-entrypoint"] }
+critbit-staking = { path = "../../programs/staking", features = ["no-entrypoint"] }
+anchor-lang.workspace = true
+
+[dev-dependencies]
+litesvm = "=0.10.0"
+solana-account = "3.2"
+solana-clock = "3"
+solana-keypair = "3.1"
+solana-signer = "3"
+solana-transaction = "3"
+solana-program-pack = "3"
+solana-program-option = "3"
+spl-token-interface = "2"

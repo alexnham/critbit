@@ -1,0 +1,21 @@
+[toolchain]
+anchor_version = "1.1.2"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+critbit_amm = "2UJP3iqx5Pn6SWuZarFfhWcxYSUuvQPNbXmjArSrWqaA"
+critbit_staking = "BgT4LsMdYp7q73t2UtkM2soKgXJHdXo2joQoaAM9UFxN"
+
+[programs.devnet]
+critbit_amm = "2UJP3iqx5Pn6SWuZarFfhWcxYSUuvQPNbXmjArSrWqaA"
+critbit_staking = "BgT4LsMdYp7q73t2UtkM2soKgXJHdXo2joQoaAM9UFxN"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo test --workspace"

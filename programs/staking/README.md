@@ -58,6 +58,7 @@ amounts passed to instructions are base units. A six-decimal mint requires
 
 Any wallet may unlock any registered character by allocating its own stake. There
 is no NFT ownership requirement or character scarcity rule. The on-chain position
-is the source of truth for the game, but game integration remains unimplemented.
+is the source of truth in the village game’s staking sync mode. The game maps
+character IDs 1–10 to Sprigkit through Clockub in map order.
 The pool admin cannot spend principal. Mint freeze authorities and program upgrade
 authorities retain their normal Solana powers and are separate from pool admin.

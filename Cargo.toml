@@ -1,0 +1,12 @@
+[workspace]
+members = ["programs/amm", "programs/staking", "crates/program-tests"]
+resolver = "2"
+
+[workspace.dependencies]
+anchor-lang = "=1.1.2"
+anchor-spl = { version = "=1.1.2", default-features = false, features = ["token", "token_2022", "token_2022_extensions"] }
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
