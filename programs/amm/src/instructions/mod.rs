@@ -1,6 +1,11 @@
-pub mod initialize_config;
-pub mod create_pool;
 pub mod add_liquidity;
+pub mod collect_protocol_fees;
+pub mod create_pool;
+pub mod initialize_config;
 pub mod remove_liquidity;
 pub mod swap;
-pub mod collect_protocol_fees;
+pub use add_liquidity::*;
+pub use collect_protocol_fees::*;
+pub use create_pool::*;
+pub use initialize_config::*;
+pub use swap::*;

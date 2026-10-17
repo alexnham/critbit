@@ -1,6 +1,14 @@
-//! Planned PDA: [b"reward_pool", stake_mint].
-//! TODO: Store admin, stake/reward mints, mint decimals, PDA bumps, vault references,
-//! total principal, reward liabilities, funding, and reward accounting policy.
-//! Principal and rewards use separate vaults even when their mint is identical.
-//! Reward duration, calculation basis, funding limits, and zero-stake behavior
-//! must be specified before implementing accrual.
+use anchor_lang::prelude::*;
+#[account]
+#[derive(InitSpace)]
+pub struct RewardPool {
+    pub admin: Pubkey,
+    pub mint: Pubkey,
+    pub stake_vault: Pubkey,
+    pub reward_vault: Pubkey,
+    pub end_timestamp: i64,
+    pub total_staked: u64,
+    /// Sum of each position's accrued rewards and reserved future rewards.
+    pub reserved_rewards: u64,
+    pub bump: u8,
+}
